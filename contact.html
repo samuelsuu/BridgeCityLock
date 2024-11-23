@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Contact Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+    <section>
+        <div class="conhero">
+            <div>
+                <img src="./assets/img/Frame.png" height="100px" alt="" srcset="">
+            </div>
+            <div>
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="phone">Contact us on +44 234 234 4567</span>
+                  </p> 
+            </div>
+        </div>
+
+
+
+        <div class="contact-section">
+            <div class="left-panel">
+              <h2>Meet with Us</h2>
+              <h1>Tell us what you want to do.</h1>
+              <p>Send a message to our mail detailing the type of service you want us to render you. We will reply within 24 hours. Our services are affordable and the best.</p>
+            </div>
+            <div class="right-panel">
+              <h3>Tell us what you want.</h3>
+              <form action="#">
+                <div class="form-row">
+                  <input type="text" placeholder="First Name" required>
+                  <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="form-row">
+                  <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-row">
+                  <textarea placeholder="Describe Your Needs" rows="4" required></textarea>
+                </div>
+                <div class="form-row">
+                  <label for="date">Proposed Date of reply</label>
+                  <input type="date" id="date" required>
+                </div>
+                <div class="checkbox">
+                  <input type="checkbox" id="agreement">
+                  <label for="agreement">I agree to be contacted by email or phone number regarding my request or future related services</label>
+                </div>
+                <div class="buttons">
+                    <div>
+                        <button type="button" class="cancel-btn">Cancel</button>
+                    </div>
+                  <div>
+                    <button type="submit" class="send-btn">Send <i class="fas fa-arrow-right"></i></button>
+                  </div>
+                  
+                </div>
+              </form>
+            </div>
+          </div>
+    </section>
+  
+</body>
+</html>

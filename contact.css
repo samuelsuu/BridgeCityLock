@@ -1,0 +1,197 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  section {
+    margin: 20px 50px;
+  }
+  
+  .conhero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .conhero p {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .left-panel, .right-panel {
+    padding: 2rem;
+    flex: 1 1 50%;
+  }
+  
+  .left-panel {
+    position: relative;
+    background-image: url('./assets/img/contact.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .left-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Black overlay with 30% opacity */
+    z-index: -1; /* Ensures overlay stays behind the content */
+  }
+  
+  .left-panel h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+  
+  .left-panel h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  
+  .right-panel {
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .right-panel h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  form {
+    padding: 1rem;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .form-row input, .form-row textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .form-row label {
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  /* Align Checkbox and Label */
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .checkbox input {
+    margin: 0; /* Remove default margin from checkbox */
+  }
+  
+  .checkbox label {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* Align Buttons */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px; /* Space between buttons */
+    margin-top: 20px;
+  }
+  
+  .cancel-btn, .send-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background: #ccc;
+    color: #000;
+  }
+  
+  .send-btn {
+    background: #d69e2e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .send-btn i {
+    margin-left: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .conhero p {
+        background-color: #000;
+        color: #fff;
+        font-size: 10px;
+        padding: 20px;
+        border-radius: 20px;
+      }
+    .contact-section {
+      flex-direction: column;
+    }
+  
+    .left-panel, .right-panel {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  
+    .left-panel {
+      padding: 1.5rem;
+      text-align: center;
+    }
+  
+    .right-panel {
+      padding: 1rem;
+    }
+  
+    .buttons {
+      justify-content: center; /* Center align buttons on smaller screens */
+    }
+  }
+  

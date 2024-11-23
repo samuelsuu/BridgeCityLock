@@ -11,114 +11,190 @@
     color: #333;
   }
   
+  /* Header styles */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+/* Styling for the contact section */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Styling for the phone number text */
+.contact p {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0; /* Ensure there is no extra margin */
+}
+
+.phone {
+  font-weight: bold;
+}
+
+/* Button styling */
+.btn {
+  background-color: #d69e2e;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #b8860b; /* Darker gold on hover */
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
   .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
+    flex-direction: column; /* Stack logo and contact vertically */
+    align-items: center; /* Center items */
+    padding: 15px 20px; /* Reduce padding for smaller screens */
   }
-  
+
+  .logo img {
+    height: 60px; /* Reduce logo size on mobile */
+  }
+
   .contact {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    gap: 2rem; /* Space between phone number and button */
+    flex-direction: column; /* Stack the contact details vertically */
+    align-items: center; /* Center align contact info */
+    gap: 1rem; /* Space between the phone number and the button */
   }
-  .contact p{
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-  }
-  
-  .phone {
-    font-weight: bold;
-    color: white; /* Highlight the phone number */
-  }
-  
+
   .contact p {
-    margin: 0; /* Remove default margin for proper alignment */
+    padding: 8px 12px; /* Adjust padding for better fit on smaller screens */
   }
-  
+
+  .phone {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+  }
+
   .btn {
-    background-color: #d69e2e;
-    color: #fff;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 0.6rem 1.2rem; /* Adjust button padding for better mobile fit */
   }
-  
-  .btn:hover {
-    background-color: #b8860b; /* Darker gold on hover */
+}
+
+/* Very small screen adjustments (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .logo img {
+    height: 50px; /* Further reduce the logo size */
   }
+
+  .contact p {
+    font-size: 0.85rem; /* Reduce the font size of the phone number */
+  }
+
+  .btn {
+    padding: 0.5rem 1rem; /* Further adjust button padding */
+  }
+}
 
 
  /* Hero Section */
-.hero {
-    padding: 4rem 0; /* Add top and bottom spacing */
-    background-color: #f9f9f9; /* Light gray background for contrast */
-  }
-  
+/* Desktop (Default) */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-direction: row; /* Default layout: image and text side by side */
+  text-align: left;
+  padding: 30px;
+}
+
+.hero-image-grid {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image-grid img {
+  max-width: 100%;
+  width: 450px;
+  border-radius: 10px;
+}
+
+.heroo {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.heroo h1 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.heroo p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.heroo .btn {
+  background-color: #d69e2e;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.heroo .btn:hover {
+  background-color: #b8860b;
+}
+
+/* Mobile (Max width 768px) */
+@media screen and (max-width: 768px) {
   .hero-content {
-    display: flex;
-    align-items: center; /* Vertically align items */
-    justify-content: space-between;
-    gap: 2rem; /* Space between image and text */
-  }
-  
-  .hero-image-grid {
-    flex: 1; /* Allow the image to take equal space */
-    display: flex;
-    justify-content: flex-end; /* Align the image to the right */
-  }
-  
-  .hero-image-grid img {
-    max-width: 100%;
-    width: 450px; /* Set max size for the image */
-    border-radius: 10px; /* Slightly rounded corners */
-  }
-  
-  .heroo {
-    flex: 1; /* Allow text to take equal space */
-    padding-left: 2rem; /* Space between text and image */
-  }
-  
-  .heroo h1 {
-    font-size: 2.5rem; /* Large, bold title */
-    line-height: 1.3; /* Improve readability */
-    margin-bottom: 1rem;
-    color: #333; /* Darker text color for better readability */
-  }
-  
-  .heroo h1 .highlight {
-    color: #d69e2e; /* Highlighted text with gold color */
-    font-weight: bold;
-  }
-  
-  .heroo p {
-    font-size: 1rem;
-    line-height: 1.6; /* Comfortable line height */
-    color: #555; /* Soft gray text color */
-    margin-bottom: 2rem;
-  }
-  
-  .heroo .btn {
-    background-color: #d69e2e; /* Gold button color */
-    color: #fff;
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .heroo .btn:hover {
-    background-color: #b8860b; /* Darker gold hover effect */
+    flex-direction: column; /* Stack text below the image */
+    text-align: center; /* Center-align the text */
+    padding: 30px;
   }
 
+  .hero-image-grid {
+    justify-content: center; /* Center the image */
+    margin-bottom: 1.5rem; /* Add spacing between the image and text */
+  }
+
+  .hero-image-grid img {
+    max-width: 80%; /* Scale down the image for smaller screens */
+    width: auto; /* Maintain aspect ratio */
+    height: auto;
+  }
+
+  .heroo {
+    padding-left: 0; /* Remove left padding on mobile */
+  }
+
+  .heroo h1 {
+    font-size: 1.8rem; /* Adjust font size for mobile */
+  }
+
+  .heroo p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+  }
+
+  .heroo .btn {
+    padding: 0.6rem 1.5rem; /* Adjust button size */
+    font-size: 0.9rem; /* Adjust button text size */
+  }
+}
 
 
   /* Services Section */
@@ -226,16 +302,86 @@
 
 
   /* .locksmith-services */
-.locksmith-services {
+/* Base styles for the section */
+.keys-and-locks {
   background-color: #f9f9f9;
   font-family: Arial, sans-serif;
   padding: 4rem 1rem;
+  text-align: center; /* Center-align content by default */
 }
 
-.container {
+.container2 {
   max-width: 1160px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
 }
+
+.keys-and-locks h2 {
+  font-size: 2rem; /* Adjust font size for better readability */
+  margin-bottom: 2rem;
+  color: #333; /* Darker text color */
+}
+
+.keys-and-locks .grid {
+  width: 100%; /* Ensure the image takes full width */
+  display: flex;
+  justify-content: center; /* Center the image */
+  margin-bottom: 2rem; /* Space below the image */
+}
+
+.keys-and-locks .grid img {
+  max-width: 80%; /* Scale down the image for smaller screens */
+  border-radius: 10px; /* Optional: Rounded corners */
+}
+
+/* Button styling */
+.keys-and-locks .btn {
+  background-color: #d69e2e; /* Gold button color */
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.keys-and-locks .btn span {
+  font-size: 1.2rem;
+}
+
+.keys-and-locks .btn:hover {
+  background-color: #b8860b; /* Darker gold hover effect */
+}
+@media screen and (max-width: 768px) {
+  .locksmith-services{
+    margin: 20px 30px ;
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+  .keys-and-locks h2 {
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
+  }
+
+  .keys-and-locks .grid img {
+    max-width: 100%; /* Allow the image to fit completely */
+    margin-bottom: 1.5rem; /* Add spacing for smaller screens */
+  }
+
+  .keys-and-locks .btn {
+    font-size: 0.9rem; /* Adjust button size for smaller screens */
+    padding: 0.6rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
 
 /* Hero Section */
 .heroe {
@@ -367,16 +513,53 @@
     font-weight: 500px;
   }
 
-  /* map */
-  .map{
-    text-align: center;
+  @media screen and (max-width: 768px) {
+    .container4{
+      display: flex;
+      flex-direction: column ;
+    }
   }
-  .map h2{
-    font-size: 40px;
+
+  /* Map section */
+.map {
+  text-align: center;
+  padding: 3rem 1rem; /* Add some padding for better spacing */
+}
+
+.map h2 {
+  font-size: 2.5rem; /* Adjust font size for larger screens */
+  color: #333;
+  margin-bottom: 1rem; /* Add space below the heading */
+}
+
+.map p {
+  font-size: 1rem; /* Standard font size for the paragraph */
+  color: #555;
+  line-height: 1.6; /* Improved line spacing */
+  margin-bottom: 2rem; /* Add space below the paragraph */
+}
+
+.map img {
+  max-width: 100%; /* Ensure the image is responsive and does not overflow */
+  height: auto; /* Maintain aspect ratio of the image */
+  margin-top: 30px;
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 768px) {
+  .map h2 {
+    font-size: 2rem; /* Adjust the heading size for smaller screens */
   }
-  .map img{
-    margin-top: 30px;
+
+  .map p {
+    font-size: 0.9rem; /* Adjust paragraph text for readability */
   }
+
+  .map img {
+    max-width: 90%; /* Allow image to scale down on mobile */
+    margin-top: 20px; /* Reduce top margin for mobile */
+  }
+}
 
   /* Testimonials Section */
 .testimonials {
@@ -483,64 +666,126 @@
 
 
   /* footer */
-  li{
-    list-style: none;
+ /* Footer Styles */
+.container5 {
+  background-color: #0f0f0f;
+  color: #fff;
+  padding: 3rem 1rem;
+}
+
+/* Main footer section */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.foot h2 {
+  font-size: 3rem; /* Smaller font size for better readability */
+  margin-bottom: 1rem;
+}
+
+.foot p {
+  font-size: 1rem;
+  color: #948f8f;
+  line-height: 1.6;
+}
+
+.foot .btn {
+  background-color: #d69e2e;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.foot .btn:hover {
+  background-color: #b8860b; /* Darker gold on hover */
+}
+
+/* Footer info section */
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow footer items to wrap */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer-item {
+  line-height: 1.6;
+  flex: 1; /* Make each item take equal width */
+  min-width: 200px; /* Ensure items don't shrink too much on small screens */
+  padding: 1rem;
+}
+
+.footer-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-item p, 
+.footer-item li {
+  color: #948f8f;
+  font-size: 0.9rem; /* Reduce font size for mobile */
+}
+
+.footer-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .foot {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    text-align: center;
   }
-  .container5{
-    background-color: #0f0f0f;
-    color: #fff;
+
+  .foot h2 {
+    font-size: 2rem; /* Adjust heading size */
   }
-  .foot{
-    display: flex;
-    justify-content: space-around;
-    padding: 40px 60px;
-    
+
+  .footer-info {
+    flex-direction: column; /* Stack footer items vertically */
+    gap: 2rem;
+    text-align: center;
   }
-  .foot h2{
-    font-size: 70px;
+
+  .footer-item {
+    flex: none;
+    min-width: auto; /* Allow each footer item to adjust its size */
   }
-  .footer-info{
-    display: flex;
-    justify-content: space-around;
+
+  .footer-item h3 {
+    font-size: 1.1rem; /* Smaller heading for mobile */
   }
-  .footer-item{
-    line-height: 35px;
+
+  .footer-item p, 
+  .footer-item li {
+    font-size: 0.85rem; /* Reduce font size for better fit */
   }
-  .footer-item p,
-  .footer-item li
-  {
-    color: #948f8f;
+}
+
+@media screen and (max-width: 480px) {
+  .foot h2 {
+    font-size: 1.5rem; /* Further reduce heading size on very small screens */
   }
+
   .footer-item img {
-    display: block;
-    width: 100%;
-    border-radius: 10px; /* Optional, for rounded corners */
+    max-width: 80%; /* Reduce image size on small screens */
+    margin-top: 1rem;
   }
-  
-  .social-icons {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap: 15px; /* Space between icons */
+
+  .footer-item p, 
+  .footer-item li {
+    font-size: 0.8rem; /* Even smaller text for readability */
   }
-  
-  .social-icons .icon {
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: #ffffff;
-    background-color: rgba(250, 247, 247, 0.7);
-    padding: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .social-icons .icon:hover {
-    background-color: #d69e2e; /* Gold hover effect */
-    transform: scale(1.2);
-  }
-  
-  .instagram { color: #E4405F; } /* Instagram red */
-  .twitter { color: #1DA1F2; }   /* Twitter blue */
-  .facebook { color: #1877F2; }  /* Facebook b
+}
