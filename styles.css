@@ -1,0 +1,546 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+  }
+  
+  .contact {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 2rem; /* Space between phone number and button */
+  }
+  .contact p{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .phone {
+    font-weight: bold;
+    color: white; /* Highlight the phone number */
+  }
+  
+  .contact p {
+    margin: 0; /* Remove default margin for proper alignment */
+  }
+  
+  .btn {
+    background-color: #d69e2e;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #b8860b; /* Darker gold on hover */
+  }
+
+
+ /* Hero Section */
+.hero {
+    padding: 4rem 0; /* Add top and bottom spacing */
+    background-color: #f9f9f9; /* Light gray background for contrast */
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: space-between;
+    gap: 2rem; /* Space between image and text */
+  }
+  
+  .hero-image-grid {
+    flex: 1; /* Allow the image to take equal space */
+    display: flex;
+    justify-content: flex-end; /* Align the image to the right */
+  }
+  
+  .hero-image-grid img {
+    max-width: 100%;
+    width: 450px; /* Set max size for the image */
+    border-radius: 10px; /* Slightly rounded corners */
+  }
+  
+  .heroo {
+    flex: 1; /* Allow text to take equal space */
+    padding-left: 2rem; /* Space between text and image */
+  }
+  
+  .heroo h1 {
+    font-size: 2.5rem; /* Large, bold title */
+    line-height: 1.3; /* Improve readability */
+    margin-bottom: 1rem;
+    color: #333; /* Darker text color for better readability */
+  }
+  
+  .heroo h1 .highlight {
+    color: #d69e2e; /* Highlighted text with gold color */
+    font-weight: bold;
+  }
+  
+  .heroo p {
+    font-size: 1rem;
+    line-height: 1.6; /* Comfortable line height */
+    color: #555; /* Soft gray text color */
+    margin-bottom: 2rem;
+  }
+  
+  .heroo .btn {
+    background-color: #d69e2e; /* Gold button color */
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .heroo .btn:hover {
+    background-color: #b8860b; /* Darker gold hover effect */
+  }
+
+
+
+  /* Services Section */
+.services {
+    padding: 4rem 1rem; /* Add top, bottom spacing, and side padding for smaller screens */
+    background-color: #f9f9f9; /* Light background for contrast */
+    text-align: center; /* Center-align text */
+  }
+  
+  .services h2 {
+    font-size: 2.5rem; /* Larger font size for better visibility */
+    color: #333; /* Dark heading color */
+    font-weight: bold;
+  }
+  .services p{
+    margin-bottom: 3rem; /* Add more spacing below the heading */
+  }
+  .services button{
+    margin-top: 30px;
+    padding: 15px 30px;
+    border-radius: 20px;
+  }
+ 
+  
+  .service-grid {
+    display: flex;
+    justify-content: center; /* Center the grid */
+    gap: 2rem; /* Space between service cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: stretch; /* Align all cards to equal height */
+  }
+  
+  .service-card {
+    background-color: #fff; /* White card background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    padding: 2rem 1.5rem; /* Add padding for content */
+    text-align: center; /* Center-align card content */
+    max-width: 300px; /* Limit width for consistent card size */
+    flex: 1 1 calc(33.333% - 2rem); /* Adjust card width to take one-third on larger screens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add more prominent shadow on hover */
+  }
+  
+  .service-card img {
+    width: 200px; /* Fixed icon size */
+    margin-bottom: 1.5rem; /* Add spacing below the image */
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem; /* Increase heading size for better emphasis */
+    color: #d69e2e; /* Gold heading color */
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+  
+  .service-card p {
+    font-size: 1rem; /* Adjust paragraph size for better readability */
+    color: #555; /* Softer gray for readability */
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 1024px) {
+    .service-grid {
+      gap: 1.5rem; /* Reduce spacing between cards */
+    }
+  
+    .service-card {
+      flex: 1 1 calc(50% - 1.5rem); /* Display two cards per row */
+    }
+  
+    .service-card img {
+      width: 70px; /* Slightly smaller icons on smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .service-grid {
+      flex-direction: column; /* Stack the cards vertically */
+      gap: 2rem; /* Keep sufficient space between stacked cards */
+      align-items: center; /* Center-align the grid */
+    }
+  
+    .service-card {
+      max-width: 100%; /* Allow cards to take full width */
+      flex: none; /* Remove flex-grow to stack cards properly */
+    }
+  
+    .service-card img {
+      width: 60px; /* Adjust icon size for mobile */
+    }
+  
+    .services h2 {
+      font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+  }
+
+ 
+
+
+  /* .locksmith-services */
+.locksmith-services {
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.heroe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.heroe-content {
+  flex: 1;
+  max-width: 750px;
+  background-color: #5f3e16;
+  color: white;
+  padding: 50px;
+  border-radius: 30px;
+}
+
+.heroe-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: #d69e2e;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button span {
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #b38120;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 500px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  color: #d69e2e;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+  /* keys-and-locks */
+  .keys-and-locks{
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .keys-and-locks h2{
+    font-size: 40px;
+  }
+  
+  /* statistics */
+  .statistics button{
+    margin-top: 25px;
+  }
+  .statistics {
+    background-color: #050505;
+    color: white;
+    padding: 40px 10px;
+    margin: 30px 50px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  .container4{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .stat h3{
+    font-size: 20px;
+    color: #706e6e;
+  }
+  .stat p{
+    font-size: 40px;
+    font-weight: 500px;
+  }
+
+  /* map */
+  .map{
+    text-align: center;
+  }
+  .map h2{
+    font-size: 40px;
+  }
+  .map img{
+    margin-top: 30px;
+  }
+
+  /* Testimonials Section */
+.testimonials {
+  text-align: center;
+  background-color: #f7f6f6;
+  color: #0e0d0d;
+  padding: 4rem 2rem;
+}
+
+.testimonials .section-title {
+  color: #d69e2e; /* Gold color */
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.slider-btn {
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+  background-color: #d69e2e;
+  color: #fff;
+}
+
+.testimonial-card {
+  background-color: F9F9F9;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.testimonial-card .user-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card h3 {
+  font-size: 1.25rem;
+  color: #d69e2e;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card h3 span {
+  color: #0e0d0d;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.stars {
+  color: #d69e2e;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #050505;
+  line-height: 1.5;
+}
+
+.dots {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #444;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #d69e2e;
+}
+
+
+  /* footer */
+  li{
+    list-style: none;
+  }
+  .container5{
+    background-color: #0f0f0f;
+    color: #fff;
+  }
+  .foot{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 60px;
+    
+  }
+  .foot h2{
+    font-size: 70px;
+  }
+  .footer-info{
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer-item{
+    line-height: 35px;
+  }
+  .footer-item p,
+  .footer-item li
+  {
+    color: #948f8f;
+  }
+  .footer-item img {
+    display: block;
+    width: 100%;
+    border-radius: 10px; /* Optional, for rounded corners */
+  }
+  
+  .social-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 15px; /* Space between icons */
+  }
+  
+  .social-icons .icon {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: rgba(250, 247, 247, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icons .icon:hover {
+    background-color: #d69e2e; /* Gold hover effect */
+    transform: scale(1.2);
+  }
+  
+  .instagram { color: #E4405F; } /* Instagram red */
+  .twitter { color: #1DA1F2; }   /* Twitter blue */
+  .facebook { color: #1877F2; }  /* Facebook b
