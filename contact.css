@@ -182,8 +182,17 @@
     }
   
     .left-panel {
-      padding: 1.5rem;
+      padding: 2.5rem;
       text-align: center;
+    }
+    .left-panel h2 {
+      font-size: 15px;
+    }
+    .left-panel h1{
+      font-size: 30px;
+    }
+    .left-panel p{
+      font-size: 15px;
     }
   
     .right-panel {
