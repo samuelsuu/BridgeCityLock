@@ -763,6 +763,7 @@
     flex: none;
     min-width: auto; /* Allow each footer item to adjust its size */
   }
+  
 
   .footer-item h3 {
     font-size: 1.1rem; /* Smaller heading for mobile */
@@ -788,4 +789,16 @@
   .footer-item li {
     font-size: 0.8rem; /* Even smaller text for readability */
   }
+  .footer-item img{
+    padding-left: 50px;
+  }
+}
+
+li{
+  text-decoration: none;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #948f8f;
 }
