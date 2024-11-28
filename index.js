@@ -7,21 +7,21 @@ const testimonials = [
     name: "Mark Smith",
     role: "Home Owner",
     rating: 5,
-    text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
+    text: "After losing my car keys at the mall, I thought my day was ruined. But Bridge City Locksmith saved the day by creating a new key on-site in no time. Their service is efficient, affordable, and stress-free!",
   },
   {
     img: "./assets/img/Ellipse.svg",
     name: "Jane Doe",
     role: "Business Owner",
     rating: 5,
-    text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type.",
+    text: "Our office had several outdated locks that were causing security concerns. Bridge City Locksmith not only replaced them with high-quality locks but also provided us with additional tips on how to keep our business secure. Their expertise is unmatched!",
   },
   {
     img: "./assets/img/Ellipse.svg",
     name: "John Doe",
     role: "Software Engineer",
     rating: 5,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    text: "I accidentally locked myself out of my home late at night, and Bridge City Locksmith came to the rescue within minutes! Their technician was professional, fast, and friendly. I couldn’t have asked for better service. Highly recommend them to anyone in need of reliable locksmith services!",
   },
 ];
 
